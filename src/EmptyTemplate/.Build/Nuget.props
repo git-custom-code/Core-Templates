@@ -1,0 +1,13 @@
+<Project>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>$(Version)</PackageVersion>
+    <PackageProjectUrl>https://github.com/git-custom-code/EmptyTemplate</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/git-custom-code/EmptyTemplate</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>c#</PackageTags>
+    <PackageLicenseUrl>https://github.com/git-custom-code/EmptyTemplate/License.txt</PackageLicenseUrl>
+  </PropertyGroup>
+
+</Project>

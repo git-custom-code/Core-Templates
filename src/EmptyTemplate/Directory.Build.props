@@ -1,0 +1,20 @@
+<Project>
+
+  <!--#if (SyncVersioning)-->
+  <Import Project="$(SolutionDir).Build/Versioning.props" />
+  <!--#endif-->
+  <!--#if (SyncCopyright)-->
+  <Import Project="$(SolutionDir).Build/Copyright.props" />
+  <!--#endif-->
+  <!--#if (GenerateXmlDocumentation)-->
+  <Import Project="$(SolutionDir).Build/Documentation.props" />
+  <!--#endif-->
+  <!--#if (SignProjects)-->
+  <Import Project="$(SolutionDir).Build/Signing.props" />
+  <!--#endif-->
+  <!--#if (BuildNugetPackages)-->
+  <Import Project="$(SolutionDir).Build/Nuget.props"
+          Condition="!$(MSBuildProjectName.StartsWith('Test.')) And !$(MSBuildProjectName.StartsWith('Benchmark.'))"/>
+  <!--#endif-->
+
+</Project>

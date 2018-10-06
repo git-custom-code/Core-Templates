@@ -1,0 +1,77 @@
+{
+  "author": "CustomCode",
+  "classifications": [],
+  "description": "template description",
+  "name": "Library",
+  "defaultName": "EmptyTemplate",
+  "identity": "Sample.Template.CSharp",
+  "groupIdentity": "Sample.Template",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "shortName": "Empty",
+  "sourceName": "ClassLibrary1",
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "!(BuildNugetPackages)",
+          "exclude": [ ".Build/Nuget.props", ".Build/Nuget.targets", "Directory.Build.targets" ]
+        },
+        {
+          "condition": "!(GenerateXmlDocumentation)",
+          "exclude": [ ".Build/Documentation.props" ]
+        },
+        {
+          "condition": "!(SignProjects)",
+          "exclude": [ ".Build/Signing.props", ".Build/CustomCode.snk" ]
+        },
+        {
+          "condition": "!(SyncCopyright)",
+          "exclude": [ ".Build/Copyright.props" ]
+        },
+        {
+          "condition": "!(SyncVersioning)",
+          "exclude": [ ".Build/Versioning.props" ]
+        },
+        {
+          "condition": "!(BuildNugetPackages || GenerateXmlDocumentation || SignProjects || SyncCopyright || SyncVersioning)",
+          "exclude": [ ".Build", "Directory.Build.props" ]
+        }
+      ]
+    }
+  ],
+  "symbols": {
+    "BuildNugetPackages": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "A flag indicating whether or not the solution's projects should be packaged on build"
+    },
+    "GenerateXmlDocumentation": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "A flag indicating whether or not the solution's projects should generate xml documentation"
+    },
+    "SignProjects": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "A flag indicating whether or not the solution's projects should be signed"
+    },
+    "SyncCopyright": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "A flag indicating whether or not the solution's projects use synchronized copyright information"
+    },
+    "SyncVersioning": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "A flag indicating whether or not the solution's projects use synchronized semantic versioning"
+    }
+  }
+}

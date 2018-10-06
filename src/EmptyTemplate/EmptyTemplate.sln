@@ -1,0 +1,64 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{BF139545-0B81-4D20-A5C5-070ADBC6C558}"
+EndProject
+//#if (BuildNugetPackages || GenerateXmlDocumentation || SignProjects || SyncCopyright || SyncVersioning)
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B064AD0-8291-4138-962F-F3B5A078ECB0}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		//#if (BuildNugetPackages)
+		Directory.Build.targets = Directory.Build.targets
+		//#endif
+	EndProjectSection
+EndProject
+//#endif
+//#if (BuildNugetPackages || GenerateXmlDocumentation || SignProjects || SyncCopyright || SyncVersioning)
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{7550F83C-FA55-4DBE-9101-CC418E6CEFBB}"
+	ProjectSection(SolutionItems) = preProject
+		//#if (SyncCopyright)
+		.Build\Copyright.props = .Build\Copyright.props
+		//#endif
+		//#if (SignProjects)		
+		.Build\CustomCode.snk = .Build\CustomCode.snk
+		//#endif		
+		//#if (GenerateXmlDocumentation)
+		.Build\Documentation.props = .Build\Documentation.props
+		//#endif		
+		//#if (BuildNugetPackages)
+		.Build\Nuget.props = .Build\Nuget.props
+		.Build\Nuget.targets = .Build\Nuget.targets
+		//#endif		
+		//#if (SignProjects)
+		.Build\Signing.props = .Build\Signing.props
+		//#endif	
+		//#if (SyncVersioning)
+		.Build\Versioning.props = .Build\Versioning.props
+		//#endif
+	EndProjectSection
+EndProject
+//#endif
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF139545-0B81-4D20-A5C5-070ADBC6C558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF139545-0B81-4D20-A5C5-070ADBC6C558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF139545-0B81-4D20-A5C5-070ADBC6C558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF139545-0B81-4D20-A5C5-070ADBC6C558}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+//#if (BuildNugetPackages || GenerateXmlDocumentation || SignProjects || SyncCopyright || SyncVersioning)
+	GlobalSection(NestedProjects) = preSolution
+		{7550F83C-FA55-4DBE-9101-CC418E6CEFBB} = {9B064AD0-8291-4138-962F-F3B5A078ECB0}
+	EndGlobalSection
+//#endif
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBBC979B-4C22-4B2D-A1CA-1F393B4E32F2}
+	EndGlobalSection
+EndGlobal

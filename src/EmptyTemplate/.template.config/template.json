@@ -1,8 +1,9 @@
 {
+  "$schema": "http://json.schemastore.org/template",
   "author": "CustomCode",
   "classifications": [],
   "description": "template description",
-  "name": "Library",
+  "name": "Empty Solution",
   "defaultName": "EmptyTemplate",
   "identity": "Sample.Template.CSharp",
   "groupIdentity": "Sample.Template",
@@ -10,8 +11,8 @@
     "language": "C#",
     "type": "solution"
   },
-  "shortName": "Empty",
-  "sourceName": "ClassLibrary1",
+  "shortName": "cc-empty",
+  "sourceName": "EmptyTemplate",
   "sources": [
     {
       "modifiers": [
@@ -46,31 +47,31 @@
     "BuildNugetPackages": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "A flag indicating whether or not the solution's projects should be packaged on build"
     },
     "GenerateXmlDocumentation": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "A flag indicating whether or not the solution's projects should generate xml documentation"
     },
     "SignProjects": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "A flag indicating whether or not the solution's projects should be signed"
     },
     "SyncCopyright": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "A flag indicating whether or not the solution's projects use synchronized copyright information"
     },
     "SyncVersioning": {
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "A flag indicating whether or not the solution's projects use synchronized semantic versioning"
     }
   }
